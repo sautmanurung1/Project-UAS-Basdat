@@ -2,6 +2,8 @@ from flask import Flask, render_template, url_for, redirect, request
 from flask_mysqldb import MySQL
 from werkzeug.security import check_password_hash, generate_password_hash
 import MySQLdb.cursors
+
+
 app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = 'localhost'
