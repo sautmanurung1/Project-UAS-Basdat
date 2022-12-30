@@ -19,8 +19,9 @@
         <div id="login-column" class="col-md-6">
           <div id="login-box" class="col-md-12">
             <!-- FORM  -->
-            <form id="login-form" class="form" action="" method="post">
+            <form id="login-form" class="form" action="{{ url_for('register') }}" method="post">
               <h3 class="text-center text-info">Register</h3>
+              <div class="msg">{{ msg }}</div>
               <div class="form-group">
                 <label for="FLname" class="text-info">First and Last Name</label><br />
                 <div class="input-group">

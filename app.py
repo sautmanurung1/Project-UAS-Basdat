@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, redirect, request
 from flask_mysqldb import MySQL
 from werkzeug.security import check_password_hash, generate_password_hash
 import MySQLdb.cursors
-
+import re
 
 app = Flask(__name__)
 
@@ -38,6 +38,27 @@ def login():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    msg = ''
+    if request.method == 'POST' and 'first_name' in request.form and 'last_name' in request.form and 'email' in request.form and 'password' in request.form:
+        first_name = request.form['first_name']
+        last_name = request.form['last_name']
+        email = request.form['email']
+        password = request.form['password']
+        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('SELECT * FROM users WHERE email = % s', (email, ))
+        users = cursor.fetchone()
+        if users:
+            msg = 'Account already exist !'
+        elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
+            msg = 'Invalid email address !'
+        elif not email or not password or not email:
+            msg = 'Please fill out the form !'
+        else:
+            cursor.execute('INSERT INTO users VALUES (NULL, % s, % s, % s, % s, 2)', (first_name, last_name, email, password, role_id, ))
+            mysql.connection.commit()
+            msg = 'You have successfully registered !'
+    elif request.method == 'POST':
+        msg = 'Please fill out the form !'
     return render_template('register.html')
 
 @app.route('/logout')
