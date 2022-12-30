@@ -19,7 +19,7 @@
         <div id="login-column" class="col-md-6">
           <div id="login-box" class="col-md-12">
             <!-- FORM  -->
-            <form id="login-form" class="form" action="{{ url_for('register') }}" method="post">
+            <form id="login-form" class="form" action="/register" method="post">
               <h3 class="text-center text-info">Register</h3>
               <div class="msg">{{ msg }}</div>
               <div class="form-group">
@@ -35,7 +35,7 @@
               </div>
               <div class="form-group">
                 <label for="password" class="text-info">Password</label><br />
-                <input type="text" name="password" id="password" class="form-control" />
+                <input type="password" name="password" id="password" class="form-control" />
               </div>
               <div class="form-group">
                 <label for="phone" class="text-info">Phone Number</label><br />
