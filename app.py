@@ -32,6 +32,8 @@ def login():
             session['email'] = users['email']
             msg = 'Logged in Successfully !'
             return render_template('index.html', msg = msg)
+        elif not check_password_hash(users['password'], password):
+            msg = 'Incorrect Password'
         else:
             msg = 'Incorrect email / password !'
     return render_template('login.html', msg = msg)
@@ -54,7 +56,7 @@ def register():
         elif not email or not password or not email:
             msg = 'Please fill out the form !'
         else:
-            cursor.execute('INSERT INTO users VALUES (NULL, % s, % s, % s, % s, 2)', (first_name, last_name, email, password, role_id, ))
+            cursor.execute('INSERT INTO users VALUES (NULL, % s, % s, % s, % s, 2)', (first_name, last_name, email, generate_password_hash(password), role_id, ))
             mysql.connection.commit()
             msg = 'You have successfully registered !'
     elif request.method == 'POST':
