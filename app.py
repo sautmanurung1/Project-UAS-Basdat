@@ -16,7 +16,7 @@ mysql = MySQL(app)
 
 @app.route('/')
 def dashboard():
-    return 'Hello Guys'
+    return render_template('login.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
