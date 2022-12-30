@@ -40,7 +40,7 @@
   <header class="justify-content-between">
     <nav class="navbar py-2" style="background-color: #edf6fd">
       <div>
-        <a class="navbar-brand" href="home.html">
+        <a class="navbar-brand" href="{{ url_for('home') }}">
           <img src="{{ url_for('static', filename='img/Hotel-icon.png') }}" width="30" height="30"
             class="d-inline-block align-top" alt="" />
           Hotel
@@ -49,7 +49,7 @@
       <div class="">
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+            <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="room_list.html">Room List</a>
@@ -102,19 +102,19 @@
                 <span class="">Wi-Fi</span>
               </li>
               <li>
-                <img src="url_for('static' filename='img/icon/ico_safe.png')" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_safe.png') }}" alt="" class="icon" />
                 <span class="">In-Room Safe</span>
               </li>
               <li>
-                <img src="url_for('static', filename='img/icon/ico_accessible.png')" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_accessible.png') }}" alt="" class="icon" />
                 <span class="">Accessible</span>
               </li>
               <li>
-                <img src="url_for('static', filename='img/icon/ico_deskchair.png')" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_deskchair.png') }}" alt="" class="icon" />
                 <span class="">Desk</span>
               </li>
               <li>
-                <img src="url_for('static', filename='img/icon/ico_water.png')" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_water.png') }}" alt="" class="icon" />
                 <span class="">Bottled Water</span>
               </li>
             </ul>
@@ -146,7 +146,7 @@
               <!-- GAMBAR 1 -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="url_for('static', filename='img/detail_standard1.jpg')" alt="pic1" />
+                  <img src="{{ url_for('static', filename='img/detail_standard1.jpg') }}" alt="pic1" />
                   <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
@@ -156,7 +156,7 @@
 
                 <!-- GAMBAR 2 -->
                 <div class="carousel-item">
-                  <img src="url_for('static', filename='img/detail_standard2.jpg')" alt="pic1" />
+                  <img src="{{ url_for('static', filename='img/detail_standard2.jpg') }}" alt="pic1" />
                   <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
@@ -166,7 +166,7 @@
 
                 <!-- GAMBAR 3 -->
                 <div class="carousel-item">
-                  <img src="url_for('static', filename='img/detail_standard3.jpg')" alt="pic1" />
+                  <img src="{{ url_for('static', filename='img/detail_standard3.jpg') }}" alt="pic1" />
                   <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
@@ -207,11 +207,11 @@
 
             <ul>
               <li>
-                <img src="url_for('static', filename='img/icon/ico_length.png')" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_length.png') }}" alt="" class="icon" />
                 <span class="">32 Sqm / 344q Ft</span>
               </li>
               <li>
-                <img src="img/icon/ico_occupancy.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_occupancy.png') }}" alt="" class="icon" />
                 <span class="">Max Occupancy: 4</span>
               </li>
             </ul>
@@ -221,31 +221,31 @@
             <h4>Facilities</h4>
             <ul>
               <li>
-                <img src="img/icon/ico_wifi.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_wifi.png') }}" alt="" class="icon" />
                 <span class="">Wi-Fi</span>
               </li>
               <li>
-                <img src="img/icon/ico_safe.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_safe.png') }}" alt="" class="icon" />
                 <span class="">In-Room Safe</span>
               </li>
               <li>
-                <img src="img/icon/ico_accessible.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_accessible.png') }}" alt="" class="icon" />
                 <span class="">Accessible</span>
               </li>
               <li>
-                <img src="img/icon/ico_deskchair.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_deskchair.png') }}" alt="" class="icon" />
                 <span class="">Desk</span>
               </li>
               <li>
-                <img src="img/icon/ico_water.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_water.png') }}" alt="" class="icon" />
                 <span class="">Bottled Water</span>
               </li>
               <li>
-                <img src="img/icon/ico_coffeemaker.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_coffeemaker.png') }}" alt="" class="icon" />
                 <span class="">Coffee & Tea Maker</span>
               </li>
               <li>
-                <img src="img/icon/ico_freezer.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_freezer.png') }}" alt="" class="icon" />
                 <span class="">Compact Refrigerator</span>
               </li>
             </ul>
@@ -277,7 +277,7 @@
               <!-- GAMBAR 1 -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="img/detail_deluxe1.jpg" alt="pic1" />
+                  <img src="{{ url_for('static', filename='img/detail_deluxe1.jpg') }}" alt="pic1" />
                   <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
@@ -287,7 +287,7 @@
 
                 <!-- GAMBAR 2 -->
                 <div class="carousel-item">
-                  <img src="img/detail_deluxe2.jpg" alt="pic1" />
+                  <img src="{{ url_for('static', filename='img/detail_deluxe2.jpg') }}" alt="pic1" />
                   <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
@@ -297,7 +297,7 @@
 
                 <!-- GAMBAR 3 -->
                 <div class="carousel-item">
-                  <img src="img/detail_deluxe3.jpg" alt="pic1" />
+                  <img src="{{ url_for('static', filename='img/detail_deluxe3.jpg') }}" alt="pic1" />
                   <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
@@ -336,11 +336,11 @@
 
             <ul>
               <li>
-                <img src="img/icon/ico_length.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_length.png') }}" alt="" class="icon" />
                 <span class="">94 Sqm / 1011 Sq Ft</span>
               </li>
               <li>
-                <img src="img/icon/ico_occupancy.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_occupancy.png') }}" alt="" class="icon" />
                 <span class="">Max Occupancy: 4</span>
               </li>
             </ul>
@@ -350,44 +350,44 @@
             <h4>Facilities</h4>
             <ul style="column-count: 2">
               <li>
-                <img src="img/icon/ico_wifi.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_wifi.png') }}" alt="" class="icon" />
                 <span class="">Wi-Fi</span>
               </li>
               <li>
-                <img src="img/icon/ico_safe.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_safe.png') }}" alt="" class="icon" />
                 <span class="">In-Room Safe</span>
               </li>
               <li>
-                <img src="img/icon/ico_accessible.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_accessible.png') }}" alt="" class="icon" />
                 <span class="">Accessible</span>
               </li>
               <li>
-                <img src="img/icon/ico_deskchair.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_deskchair.png') }}" alt="" class="icon" />
                 <span class="">Spacious Workspace</span>
               </li>
               <li>
-                <img src="img/icon/ico_livingR.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_livingR.png') }}" alt="" class="icon" />
                 <span class="">Separate Living Area</span>
               </li>
               <li>
-                <img src="img/icon/ico_gardenV.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_gardenV.png') }}" alt="" class="icon" />
                 <span class="">Garden View</span>
               </li>
               <li>
-                <img src="img/icon/ico_cityV.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_cityV.png') }}" alt="" class="icon" />
                 <span class="">City View</span>
               </li>
               <li>
-                <img src="img/icon/ico_soundproof.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_soundproof.png') }}" alt="" class="icon" />
                 <span class="">Soundproofing</span>
               </li>
               <li>
-                <img src="img/icon/ico_freezer.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_freezer.png') }}" alt="" class="icon" />
                 <span class="">Compact Refrigerator</span>
               </li>
               <li></li>
               <li>
-                <img src="img/icon/ico_minibar.png" alt="" class="icon" />
+                <img src="{{ url_for('static', filename='img/icon/ico_minibar.png') }}" alt="" class="icon" />
                 <span class="">Minibar</span>
               </li>
             </ul>
@@ -419,7 +419,7 @@
               <!-- GAMBAR 1 -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="img/detail_suite1.jpg" alt="pic1" />
+                  <img src="{{ url_for('static', filename='img/detail_suite1.jpg') }}" alt="pic1" />
                   <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
@@ -429,7 +429,7 @@
 
                 <!-- GAMBAR 2 -->
                 <div class="carousel-item">
-                  <img src="img/detail_suite2.jpg" alt="pic1" />
+                  <img src="{{ url_for('static', filename='img/detail_suite2.jpg') }}" alt="pic1" />
                   <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
@@ -439,7 +439,7 @@
 
                 <!-- GAMBAR 3 -->
                 <div class="carousel-item">
-                  <img src="img/detail_suite3.jpg" alt="pic1" />
+                  <img src="{{ url_for('static', filename='img/detail_suite3.jpg') }}" alt="pic1" />
                   <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" />
