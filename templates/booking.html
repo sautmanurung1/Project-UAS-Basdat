@@ -46,13 +46,13 @@
   <main>
     <!-- FORM  -->
     <div class="container rounded shadow-lg">
-      <form action="">
+      <form method="POST" action="{{ url_for('booking') }}">
         <h2>Booking Room</h2> <br>
         <div class="row">
           <div class="col-12 mb-4">
             <div class="form-control d-flex flex-column">
               <p class="h-blue">ROOM CLASS</p>
-              <select class="border-0 outline-none">
+              <select id="room_class" name="room_class" class="border-0 outline-none">
                 <option value="" hidden selected>Class</option>
                 <option value="1">Standard Room</option>
                 <option value="2">Deluxe Room</option>
@@ -65,17 +65,19 @@
           <div class="col-md-6 col-12 mb-4">
             <div class="form-control d-flex flex-column">
               <p class="h-blue">CHECK-IN</p>
-              <input class="inputbox textmuted" type="date" />
+              <input name="check_in" id="check_in" class="inputbox textmuted" type="date" />
             </div>
           </div>
           <div class="col-md-6 col-12 mb-4">
             <div class="form-control d-flex flex-column">
               <p class="h-blue">CHECK-OUT</p>
-              <input class="inputbox textmuted" type="date" />
+              <input name="check_out" id="check_out" class="inputbox textmuted" type="date" />
             </div>
           </div>
         </div>
-        <div class="btn btn-primary form-control text-center">BOOK ROOM</div>
+        <div class="form-control text-center">
+          <input type="submit" name="submit" class="btn btn-primary" value="BOOK NOW">
+        </div>
       </form>
     </div>
     <!-- FORM  -->

@@ -4,6 +4,7 @@ from flask import Flask, render_template, url_for, redirect, request,session
 from werkzeug.security import check_password_hash, generate_password_hash
 import MySQLdb.cursors
 import re
+import datetime as dt
 
 @app.route('/')
 def dashboard():
@@ -23,7 +24,7 @@ def login():
             session['id'] = users['id']
             session['email'] = users['email']
             msg = 'Logged in Successfully !'
-            return render_template('index.html', msg = msg)
+            return render_template('home.html', msg = msg)
         elif not check_password_hash(users['password'], password):
             msg = 'Incorrect Password'
         else:
@@ -71,8 +72,19 @@ def home():
 def room_list():
     return render_template('room_list.html')
 
-@app.route('/booking')
+@app.route('/booking', methods=['GET', 'POST'])
 def booking():
+    if request.method == 'POST':
+        bookingDetails = request.form
+        roomtype = bookingDetails['room_class']
+        check_in = request.form['check_in']
+        check_out = request.form['check_out']
+        check_in_format = dt.datetime.strptime(check_in, '%Y-%m-%d')
+        check_out_format = dt.datetime.strptime(check_out, '%Y-%m-%d')
+        print(check_in_format)
+        print(check_out_format)
+        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('INSERT INTO pemesanan VALUES (NULL, % s, % s, % s)', (roomtype, check_in, check_out, ))
     return render_template('booking.html')
 
 if __name__ == '__main__':
