@@ -71,5 +71,9 @@ def home():
 def room_list():
     return render_template('room_list.html')
 
+@app.route('/booking')
+def booking():
+    return render_template('booking.html')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
